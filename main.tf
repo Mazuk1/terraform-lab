@@ -36,3 +36,4 @@ resource "aws_instance" "lab" {
   associate_public_ip_address = true
   key_name                    = aws_key_pair.deployer.key_name
 }
+
