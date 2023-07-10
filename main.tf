@@ -39,5 +39,5 @@ resource "aws_instance" "lab" {
 
 resource "aws_ec2_instance_state" "test" {
   instance_id = aws_instance.lab.id
-  state       = "stopped"
+  state       = "running"
 }
