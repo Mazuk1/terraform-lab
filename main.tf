@@ -35,6 +35,9 @@ resource "aws_instance" "lab" {
   subnet_id                   = aws_subnet.main_1a.id
   associate_public_ip_address = true
   key_name                    = aws_key_pair.deployer.key_name
-  instance_state              = "stopped"
 }
 
+resource "aws_ec2_instance_state" "test" {
+  instance_id = aws_instance.lab.id
+  state       = "stopped"
+}
